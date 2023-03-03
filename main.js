@@ -19,3 +19,17 @@ const daysInWeek = 7;
 //既に予約されたlet,constなど使えない
 //CamelCase(一番いい方法)
 //snake_case
+
+//算術演算子
+let additionResult = 2 + 5;
+console.log(additionResult);
+
+//省略記法を使う
+let result = 5;
+//同じ答え
+result = result + 10;
+result += 10;
+
+//ややこしくなる
+result++;
+++result;
