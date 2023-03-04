@@ -111,11 +111,19 @@ let userInfo = null;
 //undefinedは予期せぬ、エラー
 
 //typeof演算子
-typeof 3
+typeof 3;
 //"number"と返す
 
-typeof true
+typeof true;
 //booleanと返す
 //配列の型はobject
 //undefined型がある
 //nullはobject型
+
+//関数について
+//何度も呼び出すことができるコードのかたまり
+//関数を定義する
+function add() {
+  console.log(1 + 1);
+}
+add();
