@@ -109,3 +109,13 @@ coffee.isHot = false;
 let userInfo = null;
 
 //undefinedは予期せぬ、エラー
+
+//typeof演算子
+typeof 3
+//"number"と返す
+
+typeof true
+//booleanと返す
+//配列の型はobject
+//undefined型がある
+//nullはobject型
