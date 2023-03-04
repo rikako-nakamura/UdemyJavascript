@@ -88,3 +88,18 @@ boolean = false;
 let array = ['apple', 'banana', 'grape'];
 array.push('peach');
 console.log(array);
+
+//object
+//キーとバリュー
+//property
+//「,」は最後につけた方がいい
+//追加する際にいい
+const coffee = {
+  name: 'chocolate Mocha',
+  size: 350,
+  isHot: true,
+  toppings: ['Cinnamon', 'Caramel'],
+};
+
+console.log(coffee.size);
+coffee.isHot = false;
