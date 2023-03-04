@@ -103,3 +103,9 @@ const coffee = {
 
 console.log(coffee.size);
 coffee.isHot = false;
+
+//nulllとundefined
+//予定通り何もない
+let userInfo = null;
+
+//undefinedは予期せぬ、エラー
