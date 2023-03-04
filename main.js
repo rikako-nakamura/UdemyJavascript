@@ -132,7 +132,10 @@ add();
 //受け取りたい
 //パラメータ(num1, num2)
 function add(num1, num2) {
-  console.log(num1 + num2);
+  return num1 + num2;
+  //retun文の下は無視される
 }
 //わたす値は引数
-add(2, 3);
+//戻ってきた値は戻り値、返り値という
+const returnedValue = add(2, 3);
+console.log(returnedValue);
