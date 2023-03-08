@@ -165,3 +165,8 @@ do {
 for (let pumpkinCount = 0; pumpkinCount < 10; pumpkinCount++) {
   console.log(pumpkinCount);
 }
+
+// カンマ演算子 あんまりない
+/* for (let a = 0, i = 0; pumpkinCount < 10; pumpkinCount++, i += 1) {
+  console.log(pumpkinCount, i);
+} */
