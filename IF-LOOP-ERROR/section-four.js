@@ -86,3 +86,6 @@ if (ok) {
 // 空文字が変える
 let username = '' ?? 'User'
 
+// 真偽値を反転する
+// falseになる
+ok = !true;
