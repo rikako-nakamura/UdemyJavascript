@@ -17,3 +17,26 @@ describe('ヘッダー部分', () => {
 	});
   });
 })
+
+const fs = require('fs');
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+
+describe('ヘッダー部分', () => {
+  it('フォルダ・ファイル一覧ボタンを押下', () => {
+    const html = fs.readFileSync('./index.html', 'utf8');
+    const dom = new JSDOM(html);
+    const fileButton = dom.window.document.querySelector('.folder-index');
+
+    const clickEvent = new dom.window.MouseEvent('click', {
+      bubbles: true,
+      cancelable: true,
+      view: dom.window
+    });
+
+    fileButton.dispatchEvent(clickEvent);
+
+    expect(dom.window.location.href).toBe('http://localhost:8080/');
+  });
+});
+
