@@ -176,8 +176,18 @@ for (let i = 0; i < fruits.length; i += 1) {
   console.log(fruits[i]);
 }
 
-// for -of文
+// for-of文は配列
 // 反復可能オブジェクトだったら使える
 for (const fruit of fruits) {
   console.log(fruit);
+}
+
+// for-in文はオブジェクト
+const coffee = {
+  name: 'caffe Latte',
+  size: 350,
+  isHot: true,
+};
+for (const key in coffee) {
+  console.log(coffee[key]);
 }
