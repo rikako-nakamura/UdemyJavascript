@@ -84,8 +84,42 @@ if (ok) {
 
 // Null合体演算子、＆＆や｜｜は一緒に使うにはグループ化する
 // 空文字が変える
-let username = '' ?? 'User'
+let username = '' ?? 'User';
 
 // 真偽値を反転する
 // falseになる
 ok = !true;
+
+// 文:抽象的だが実行するとか(const,function)
+// 式:＋ -
+
+// 式文
+// 文の中のの全体で使われる
+
+// 空文
+// ; 何もしない文
+
+// ブロック文
+{
+  // ブロックスコープ
+  const hello = 'hello';
+  {
+    // こっちが優先される
+    const hello = 'hello';
+  }
+
+}
+
+// デッドゾーン
+{
+  // ブロックスコープ
+  const hello = 'hello';
+  {
+    // デッドゾーン
+    console.log(hello);
+    // こっちが優先される
+    const hello = 'hello';
+  }
+
+}
+
