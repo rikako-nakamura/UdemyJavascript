@@ -145,3 +145,23 @@ function vegetableColor(vegetable) {
   }
 }
 // vegetableColor('pumpkin');
+
+// while文
+let count = 0;
+while (count < 10) {
+  console.log(count);
+  count += 1;
+}
+
+// do while文
+// 条件なしにまずdoが実行される
+let tomatoCount = 0;
+do {
+  console.log('do-while:', tomatoCount);
+  tomatoCount += 1;
+} while (tomatoCount < 10);
+
+// for文
+for (let pumpkinCount = 0; pumpkinCount < 10; pumpkinCount++) {
+  console.log(pumpkinCount);
+}
