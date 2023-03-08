@@ -107,7 +107,6 @@ ok = !true;
     // こっちが優先される
     const hello = 'hello';
   }
-
 }
 
 // デッドゾーン
@@ -120,6 +119,10 @@ ok = !true;
     // こっちが優先される
     const hello = 'hello';
   }
-
 }
 
+// 三項演算子
+// truthyなら'OK'
+ok = ok ? 'OK' : 'NO';
+if (ok) ok = 'OK';
+else ok = 'NO';
