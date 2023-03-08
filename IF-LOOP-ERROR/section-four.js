@@ -81,3 +81,8 @@ if (ok) {
 } else {
   console.log('NO!');
 }
+
+// Null合体演算子、＆＆や｜｜は一緒に使うにはグループ化する
+// 空文字が変える
+let username = '' ?? 'User'
+
