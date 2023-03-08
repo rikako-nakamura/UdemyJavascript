@@ -170,3 +170,14 @@ for (let pumpkinCount = 0; pumpkinCount < 10; pumpkinCount++) {
 /* for (let a = 0, i = 0; pumpkinCount < 10; pumpkinCount++, i += 1) {
   console.log(pumpkinCount, i);
 } */
+
+const fruits = ['apple', 'banana', 'grape', 'orange', 'mango'];
+for (let i = 0; i < fruits.length; i += 1) {
+  console.log(fruits[i]);
+}
+
+// for -of文
+// 反復可能オブジェクトだったら使える
+for (const fruit of fruits) {
+  console.log(fruit);
+}
