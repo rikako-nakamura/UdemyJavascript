@@ -35,7 +35,6 @@ ok = 1 > 0;
 // true
 ok = 'a' < 'b';
 
-
 ok = 'hello';
 if (ok) {
   console.log('OK!');
@@ -64,10 +63,21 @@ ok = true && false;
 // falseになる
 ok = true && false;
 
-
 // OR演算子
 // 左から右
 ok = true || false;
 
-
-
+const x = 15;
+ok = x > 10 && x < 20;
+//演算子の優先順位がある！
+// > === &&&
+// 同じ優先順位だったら、左から右とか書いてある
+const userInput = '';
+const userName = userInput || 'User';
+ok = x === 10 || (x > 12 && userName);
+console.log(ok);
+if (ok) {
+  console.log('OK!');
+} else {
+  console.log('NO!');
+}
