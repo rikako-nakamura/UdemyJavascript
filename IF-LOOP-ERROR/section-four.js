@@ -200,3 +200,12 @@ for (const key in coffee) {
     break;
   }
 }
+
+// continue
+for (const key in coffee) {
+  if (key === 'size') {
+    console.log('continue');
+    continue;
+  }
+  console.log(key);
+}
