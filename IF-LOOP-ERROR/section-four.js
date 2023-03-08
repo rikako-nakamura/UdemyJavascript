@@ -115,7 +115,7 @@ ok = !true;
   const hello = 'hello';
   {
     // デッドゾーン
-    console.log(hello);
+    //console.log(hello);
     // こっちが優先される
     const hello = 'hello';
   }
@@ -126,3 +126,22 @@ ok = !true;
 ok = ok ? 'OK' : 'NO';
 if (ok) ok = 'OK';
 else ok = 'NO';
+
+// switch文について
+// break と returnも同じ
+// caseの中はスコープがない
+// {}文で囲めばいい！
+function vegetableColor(vegetable) {
+  switch (vegetable) {
+    case 'tomato':
+      console.log('tomato is red');
+      break;
+    case 'pumpkin':
+      console.log('pumpkin is orange');
+      break;
+    // defaultaはどこでもいい
+    default:
+      console.log('not found');
+  }
+}
+// vegetableColor('pumpkin');
