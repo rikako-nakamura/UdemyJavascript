@@ -40,3 +40,11 @@ describe('ヘッダー部分', () => {
   });
 });
 
+//ログアウトクリック時に実行
+var logout = function () {
+  $.post("/logout", function () {
+    $("#testuser").html('');
+    $("#div1").show();
+    $("#div2").hide();
+  })
+}
