@@ -191,3 +191,12 @@ const coffee = {
 for (const key in coffee) {
   console.log(coffee[key]);
 }
+
+// break文
+// 直ちにその処理が終了
+for (const key in coffee) {
+  if (key === 'size') {
+    console.log('break');
+    break;
+  }
+}
