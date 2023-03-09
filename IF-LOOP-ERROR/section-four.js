@@ -253,3 +253,5 @@ try {
 } finally {
   console.log('finally');
 }
+
+throw 'error';
