@@ -220,7 +220,7 @@ coffee;
 // 例
 // わかりづらいからあまり使われない
 // 関数は使えない
-coffeeCondition: if (true) {
+/* coffeeCondition: if (true) {
   for (const key in coffee) {
     if (key === 'size') {
       console.log('break!');
@@ -231,3 +231,13 @@ coffeeCondition: if (true) {
   }
   console.log('inside an if statement');
 }
+ */
+// try-catch文
+// 実行文に対応している
+// どうしてもエラーが起きてしまう時
+try {
+  console.log(chocolate);
+} catch {
+  console.log('0');
+}
+console.log('3');
