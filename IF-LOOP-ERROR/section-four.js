@@ -209,3 +209,25 @@ for (const key in coffee) {
   }
   console.log(key);
 }
+
+// ラベル文
+//構文がネストしている時
+hello: {
+  break hello;
+}
+coffee;
+
+// 例
+// わかりづらいからあまり使われない
+// 関数は使えない
+coffeeCondition: if (true) {
+  for (const key in coffee) {
+    if (key === 'size') {
+      console.log('break!');
+      break coffeeCondition;
+    }
+    console.log(key);
+    console.log(coffee[key]);
+  }
+  console.log('inside an if statement');
+}
