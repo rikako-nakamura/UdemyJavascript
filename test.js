@@ -1,50 +1,31 @@
-describe('ヘッダー部分', () => {	
-	it('フォルダ・ファイル一覧ボタンを押下', () => {	  
-	document.addEventListener('DOMContentLoaded', () => {	
-	  const fileButton = document.querySelector('.folder-index');  
-	  const clickEvent = new MouseEvent('click', {
-		  // イベントが親要素に伝搬する
-		  bubbles: true,
-		  // イベントがキャンセル可能
-		  cancelable: true,
-		  // イベントが発生したビュー(現在のブラウザ)を指定
-		  view: window
-	  });
-	  // dispatchEventメソッドは対象となるターゲットに引数に指定したイベントを発生させる
-	  fileButton.dispatchEvent(clickEvent);
-	  // clickEventの動作が抑制されていないことを期待する
-	  expect(context.window.location.href).toBe("http://localhost:8080/");
-	});
-  });
-})
-
-const fs = require('fs');
-const jsdom = require('jsdom');
-const { JSDOM } = jsdom;
-
-describe('ヘッダー部分', () => {
-  it('フォルダ・ファイル一覧ボタンを押下', () => {
-    const html = fs.readFileSync('./index.html', 'utf8');
-    const dom = new JSDOM(html);
-    const fileButton = dom.window.document.querySelector('.folder-index');
-
-    const clickEvent = new dom.window.MouseEvent('click', {
-      bubbles: true,
-      cancelable: true,
-      view: dom.window
-    });
-
-    fileButton.dispatchEvent(clickEvent);
-
-    expect(dom.window.location.href).toBe('http://localhost:8080/');
-  });
-});
-
-//ログアウトクリック時に実行
-var logout = function () {
-  $.post("/logout", function () {
-    $("#testuser").html('');
-    $("#div1").show();
-    $("#div2").hide();
-  })
-}
+//コミット作成
+	　let createCommit = function(name, branchSHA, commitEmail, refName, message, treeSHA, srcPath) {
+		srcPath = location.pathname;
+		const GitHubToken = ""
+		let header_auth={"Authorization":`token ${GitHubToken}`, "Accept":"application/vnd.github.v3+json"};
+		console.log(message);
+		const data = {
+			owner: name,
+			repo: name,
+			message: message,
+			author: {
+				name: name,
+				email: commitEmail
+			},
+			parents: [
+			branchSHA
+			],
+			tree: treeSHA
+		}
+		const params = {
+			method: "POST",
+			headers: header_auth,
+			body: JSON.stringify(data)
+		};
+		fetch(`https://api.github.com/repos/${name}/${name}/git/commits`, params)
+		.then(response => response.json())
+		.then(commitData => {
+		    let SHA = commitData.sha
+			updateRef(SHA, name, refName);
+		});
+	　}
