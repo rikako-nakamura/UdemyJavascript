@@ -241,3 +241,15 @@ try {
   console.log('0');
 }
 console.log('3');
+
+// try-catch-finally文
+// 何がなんでもfinallyは絶対実行される
+// 基本的には使わない
+try {
+  console.log('try');
+  console.log(chocolate);
+} catch {
+  console.log('catch');
+} finally {
+  console.log('finally');
+}
