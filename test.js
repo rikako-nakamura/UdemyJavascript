@@ -1,7 +1,7 @@
 //コミット作成
 	　let createCommit = function(name, branchSHA, commitEmail, refName, message, treeSHA, srcPath) {
 		srcPath = location.pathname;
-		const GitHubToken = "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"
+		const GitHubToken = ""
 		let header_auth={"Authorization":`token ${GitHubToken}`, "Accept":"application/vnd.github.v3+json"};
 		console.log(message);
 		const data = {
