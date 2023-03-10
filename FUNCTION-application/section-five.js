@@ -23,3 +23,14 @@ console.log(sayHi);
 // 必ず上見たら式がある
 
 // 統一する
+
+// personオブジェクト
+const person = {
+  // プロパティ: メソッド
+  name: 'rikarika',
+  sayHi: function () {
+    // sayHiメソッド
+    return 'hi';
+  },
+};
+console.log(person.sayHi());
