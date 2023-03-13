@@ -45,3 +45,15 @@ sayHi = (name) => `Hi ${name}!`;
 // デフォルトパラメータ
 sayHi = (name = 'User', message = `${name}`) => `Hi ${name}! ${message}`;
 console.log(sayHi());
+
+// レストパラメータで無限の引数
+let sum = (...nums) => {
+  console.log(nums);
+  let total = 0;
+  for (num of nums) {
+    total += num;
+  }
+  return total;
+};
+
+console.log(sum(1, 3, 5));
