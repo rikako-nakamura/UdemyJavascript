@@ -57,3 +57,13 @@ let sum = (...nums) => {
 };
 
 console.log(sum(1, 3, 5));
+
+// 関数の引数には関数を入れることができる
+// その関数のことをコールバック関数という
+let subtract = (a, b, callback) => {
+  let result = a - b;
+  callback(result);
+};
+subtract(10, 3, (result) => {
+  console.log(result);
+});
