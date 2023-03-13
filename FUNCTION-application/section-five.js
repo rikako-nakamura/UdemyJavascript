@@ -70,6 +70,8 @@ subtract(10, 3, (result) => {
 
 // デバッグの時に名前つき関数式の方が非常に良い表示の方法をしてくれる
 subtract(10, 3, function showResult(result) {
-  console.log(chocolate);
+  // console.log(chocolate);
   console.log(result);
 });
+
+// typeofを使って関数かオブジェクトを調べられる
