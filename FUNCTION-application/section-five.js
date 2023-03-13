@@ -34,3 +34,10 @@ const person = {
   },
 };
 console.log(person.sayHi());
+
+sayHi = function (name) {
+  return `Hi ${name}!`;
+};
+// アロー関数
+sayHi = (name) => `Hi ${name}!`;
+
