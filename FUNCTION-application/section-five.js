@@ -41,3 +41,7 @@ sayHi = function (name) {
 // アロー関数
 sayHi = (name) => `Hi ${name}!`;
 
+// 何も渡さなかった時Userにする
+// デフォルトパラメータ
+sayHi = (name = 'User', message = `${name}`) => `Hi ${name}! ${message}`;
+console.log(sayHi());
