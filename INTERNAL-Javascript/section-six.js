@@ -24,3 +24,21 @@ function sayTomato() {
 // ディレクテブ
 // 関数の中でも定義できる
 // 同じパラメータを使えない
+
+// primitive
+// object以外(let x = 3とか)
+
+// object(データの塊)
+// オブジェクト、配列、関数
+
+// 例
+const coffee = {
+  name: 'Caffe Latte'
+}
+
+const coffee2 = coffee;
+coffee2.name = 'Espresso';
+// 'Espresso'になる
+console.log(coffee);
+
+// constというのは絶対再代入できない認識ではない
