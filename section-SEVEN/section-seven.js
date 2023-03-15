@@ -12,3 +12,14 @@ let generatePerson = (name) => {
 
 const rikako = generatePerson('rikakoko');
 console.log(rikako.getName());
+
+// IIFE(即時実行関数式)
+const counter = (() => {
+  let count = 0;
+  return () => {
+    count += 1;
+    //debugger;
+    return count;
+  };
+})();
+counter();
