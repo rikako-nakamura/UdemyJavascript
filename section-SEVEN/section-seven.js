@@ -23,3 +23,13 @@ const counter = (() => {
   };
 })();
 counter();
+
+// 再帰関数式
+// 3! = 3 * 2 * 1
+let factorial = function fact(n) {
+  if (n === 0) return 1;
+  return n * factorial(n - 1);
+
+  // return n === 0 ? 1 : n * factorial(n - 1);
+};
+console.log(factorial(3));
